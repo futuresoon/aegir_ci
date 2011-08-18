@@ -201,8 +201,8 @@ def main():
 				                run_platform_tests()
 				                run_site_tests()
 
-					        print "===> Destroying this node"
-					        conn.destroy_node(node)
+					        // print "===> Destroying this node"
+					        // conn.destroy_node(node)
 
         	                                var = 2
 	                                        break
