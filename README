@@ -6,16 +6,9 @@ The code is far from perfect because I'm rather crap at such things. The error h
 1) Create a new Rackspace server (lucid lynx 10.04 for example)
 2) Log in as root
 
-3) All commands to be performed as root:
+3) Copy and paste this whole line as root:
 
-apt-get install git-core
-git clone git://github.com/apache/libcloud.git
-apt-get install python-setuptools
-git clone git://github.com/sarapis/aegir_ci.git
-cd libcloud
-python setup.py install
-apt-get install fabric
-cd ..
+apt-get install git-core ; git clone git://github.com/apache/libcloud.git ; apt-get install python-setuptools ; git clone git://github.com/sarapis/aegir_ci.git ; cd libcloud ; python setup.py install ; apt-get install fabric ; cd ..
 
 4) 
 
