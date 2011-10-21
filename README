@@ -42,4 +42,4 @@ aliasing
 
 You can do that here: http://xx-xx-xxx-xx.static.cloud-ips.com/admin/hosting/features
 
-Don't forget that to make domain names work properly you should create A records (at Rackspace) and site aliases (in Aegir)
+Don't forget that to make domain names work properly you should create A records (at Rackspace) and site aliases (in Aegir) as well as get your registrar stuff sorted out in advance or else you'll have to wait through the DNS propagation time
