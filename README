@@ -1,6 +1,6 @@
-2. The code I'm giving you uses Libcloud API, but it is very much designed for the Rackspace Cloud driver implementation. I know for a fact, through building other tools, that other provider drivers such as Linode have differing requirements (Linode, for example, requires you to also specify a datacentre to build in). Please don't contact me complaining that it didn't work with Provider X, because I'm just showing you how we use it with Rackspace. Since there's a good chance you're smarter than me, you're welcome to take the code and abstract it properly :)
+The code I'm giving you uses Libcloud API, but it is very much designed for the Rackspace Cloud driver implementation. I know for a fact, through building other tools, that other provider drivers such as Linode have differing requirements (Linode, for example, requires you to also specify a datacentre to build in). Please don't contact me complaining that it didn't work with Provider X, because I'm just showing you how we use it with Rackspace. Since there's a good chance you're smarter than me, you're welcome to take the code and abstract it properly :)
 
-3. The code is far from perfect because I'm rather crap at such things. The error handling is extremely crude.
+The code is far from perfect because I'm rather crap at such things. The error handling is extremely crude.
 
 
 1) Create a new Rackspace server (lucid lynx 10.04 for example)
@@ -33,3 +33,11 @@ The code that does this is the function fab_install_platform().
 Thus, this code is very much specific to building your project from a makefile, the fact that the makefile is fetchable over HTTP (per the ini config file, it fetches from my github repo) and also makes some assumptions on what install profile to use when installing the site.
 
 The code that installs the site is the function fab_install_site(), and takes two arguments: the platform per the above (e.g drupal6, drupal7 or openatrium), and the install profile name (default, standard or openatrium in this example). So this is where you want to change the install profile name and only install whatever platforms you want, based on the name of your makefile.
+
+Aegir should should send you an email with a one-time login, at which point you may choose to enable more Aegir features such as:
+
+migration
+cloning
+aliasing
+
+You can do that here: http://xx-xx-xxx-xx.static.cloud-ips.com/admin/hosting/features
