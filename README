@@ -3,13 +3,28 @@
 3. The code is far from perfect because I'm rather crap at such things. The error handling is extremely crude.
 
 
+1) Create a new Rackspace server (lucid lynx 10.04 for example)
+2) Log in as root
+
+3) All commands to be performed as root:
+
+apt-get install git-core
 git clone git://github.com/apache/libcloud.git
 apt-get install python-setuptools
+git clone git://github.com/sarapis/aegir_ci.git
 cd libcloud
 python setup.py install
 apt-get install fabric
-git clone git://github.com/sarapis/aegir_ci.git
+cd ..
 
+4) 
+
+a) email - this is your personal email from which you will control aegir
+b) your rackspace username that you normally log into rackspace with
+c) your rackspace API key
+
+https://manage.rackspacecloud.com/APIAccess.do
+Show key
 
 It's at this point that you want to edit the aegir_6.x-1.1_install.py file and define what to build. In my example that I'm giving you, I'm fetching three Drush make stub or 'build' files from my github repo, named drupal6, drupal7 and openatrium .build respectively.
 
