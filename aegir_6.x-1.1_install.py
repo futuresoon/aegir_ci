@@ -69,7 +69,7 @@ def fab_install_dependencies(newpass):
         fabric.run("apt-get -y install apache2 php5 php5-cli php5-gd php5-mysql postfix mysql-server sudo rsync git-core unzip", pty=True)
 
 # Prepare a basic firewall
-def fab_prepare_firewall():
+#def fab_prepare_firewall():
         #print "===> Setting a little firewall"
         #fabric.run("iptables -I INPUT -s %s -p tcp --dport 22 -j ACCEPT; iptables -I INPUT -s %s -p tcp --dport 80 -j ACCEPT; iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT; iptables --policy INPUT DROP" % (trusted_ip, trusted_ip), pty=True)
 
