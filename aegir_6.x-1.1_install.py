@@ -38,7 +38,7 @@ config_size = config.get(provider, 'size')
 # These are used as options to Aegir during install
 email = config.get('Aegir', 'email')
 # A trusted IP to grant access to in the firewall
-trusted_ip = config.get('Aegir', 'trusted_ip')
+#trusted_ip = config.get('Aegir', 'trusted_ip')
 # Where our build files are
 builds_repo = config.get('Aegir', 'builds_repo')
 
