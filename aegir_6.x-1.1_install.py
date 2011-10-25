@@ -190,7 +190,7 @@ def main():
 				        fabric.env.password = password
 
 				        try:
-				                fab_prepare_firewall()
+				                #fab_prepare_firewall()
 				                fab_install_dependencies(newpass)
 				                fab_prepare_apache()
 				                fab_prepare_php()
