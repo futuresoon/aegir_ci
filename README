@@ -4,20 +4,20 @@ The code is far from perfect because I'm rather crap at such things. The error h
 
 
 1) Create a new Rackspace server (lucid lynx 10.04 for example)
-2) Log in as root
+2) ssh root@xx.xx.xxx.xxx (where xx.xx.xxx.xxx is the ip number of the server you just created).
 
 3) Copy and paste this whole line as root:
 
 apt-get install git-core ; git clone git://github.com/apache/libcloud.git ; apt-get install python-setuptools ; git clone git://github.com/sarapis/aegir_ci.git ; cd libcloud ; python setup.py install ; apt-get install fabric ; cd ..
 
-4) 
+4) Edit the aegir_ci_config.ini file:
 
 a) email - this is your personal email from which you will control aegir
 b) your rackspace username that you normally log into rackspace with
-c) your rackspace API key
+c) your rackspace API key which can be found at:
 
 https://manage.rackspacecloud.com/APIAccess.do
-Show key
+click Show key to unhide the key
 
 It's at this point that you want to edit the aegir_6.x-1.1_install.py file and define what to build. In my example that I'm giving you, I'm fetching three Drush make stub or 'build' files from my github repo, named drupal6, drupal7 and openatrium .build respectively.
 
@@ -26,6 +26,8 @@ The code that does this is the function fab_install_platform().
 Thus, this code is very much specific to building your project from a makefile, the fact that the makefile is fetchable over HTTP (per the ini config file, it fetches from my github repo) and also makes some assumptions on what install profile to use when installing the site.
 
 The code that installs the site is the function fab_install_site(), and takes two arguments: the platform per the above (e.g drupal6, drupal7 or openatrium), and the install profile name (default, standard or openatrium in this example). So this is where you want to change the install profile name and only install whatever platforms you want, based on the name of your makefile.
+
+5) python aegir_6.x-1.1_install.py
 
 Aegir should should send you an email with a one-time login, at which point you may choose to enable more Aegir features such as:
 
