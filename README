@@ -49,3 +49,19 @@ ln -s /path/to/drush/drush /usr/local/bin/drush
 which means on our new Aegir server
 
 ln -s /var/aegir/drush/drush /usr/local/bin/drush
+
+-----------------
+
+OwnCloud
+
+to install owncloud 
+1) find the mysql root password like so: cat /var/aegir/.drush/server_localhost.alias.drushrc.php
+the line will say something like   'master_db' => 'mysql://root:thispartisthepassword@localhost',
+2) mysql -uroot -p
+steps 3-5 are at the mysql prompt:
+3) create database owncloud;
+4) grant all privileges on owncloud.* to 'owncloud'@'localhost' identified by 'yourownclouddatabasepassword';
+5) exit
+6) go to http://xx.xx.xxx.xxx/owncloud
+7) give your admin username, password and fill out the database credentials
+8) to see how to mount a drive locally click the gear button in the bottom left corner of the browser and go to 'Personal'
