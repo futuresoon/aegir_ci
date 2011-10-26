@@ -68,6 +68,14 @@ def fab_install_dependencies(newpass):
         fabric.run("echo mysql-server mysql-server/root_password_again select %s | debconf-set-selections" % newpass, pty=True)
         fabric.run("apt-get -y install apache2 php5 php5-cli php5-gd php5-mysql postfix mysql-server sudo rsync git-core unzip", pty=True)
 
+# Install OwnCloud
+
+def fab_prepare_owncloud():
+	fabric.run("git clone git://gitorious.org/owncloud/owncloud.git")
+	fabric.run("tar xfz owncloud-owncloud-master.tar.gz")
+	fabric.run("cp -r owncloud /var/www")
+	fabric.run("chown -R www-data:www-data /var/www/owncloud")
+
 # Prepare a basic firewall
 #def fab_prepare_firewall():
         #print "===> Setting a little firewall"
