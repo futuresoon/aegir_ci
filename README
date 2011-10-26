@@ -31,9 +31,10 @@ The code that installs the site is the function fab_install_site(), and takes tw
 
 Aegir should should send you an email with a one-time login, at which point you may choose to enable more Aegir features such as:
 
-migration
-cloning
-aliasing
+migration (move the site with its database either to a new domain with the same codebase or to another platform altogether)
+cloning (create an exact copy of the database on the same codebase as a site)
+aliasing (multiple aliases for sites)
+cron queue (manage cron on all your sites)
 
 You can do that here: http://xx-xx-xxx-xx.static.cloud-ips.com/admin/hosting/features
 
