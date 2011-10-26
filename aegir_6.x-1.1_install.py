@@ -71,10 +71,9 @@ def fab_install_dependencies(newpass):
 # Install OwnCloud
 
 def fab_prepare_owncloud():
-	fabric.run("git clone git://gitorious.org/owncloud/owncloud.git")
-	fabric.run("tar xfz owncloud-owncloud-master.tar.gz")
-	fabric.run("cp -r owncloud /var/www")
-	fabric.run("chown -R www-data:www-data /var/www/owncloud")
+	fabric.run("git clone git://gitorious.org/owncloud/owncloud.git", pty=True)
+	fabric.run("cp -r owncloud /var/www", pty=True)
+	fabric.run("chown -R www-data:www-data /var/www/owncloud", pty=True)
 
 # Prepare a basic firewall
 #def fab_prepare_firewall():
@@ -200,6 +199,7 @@ def main():
 				        try:
 				                #fab_prepare_firewall()
 				                fab_install_dependencies(newpass)
+				                fab_prepare_owncloud()
 				                fab_prepare_apache()
 				                fab_prepare_php()
 				                fab_prepare_user()
