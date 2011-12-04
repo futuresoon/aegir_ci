@@ -138,13 +138,13 @@ def run_platform_tests():
         print "===> Installing some common platforms"
         fab_install_platform('drupal6')
         fab_install_platform('drupal7')
-        fab_install_platform('managingnews')
+        fab_install_platform('kickstarterclone')
 
 def run_site_tests():
         print "===> Installing some sites"
         fab_install_site('drupal6', 'default')
         fab_install_site('drupal7', 'standard')
-        fab_install_site('managingnews', 'default')
+        fab_install_site('kickstarterclone', 'default')
 
 def main():
         # Run some tests
