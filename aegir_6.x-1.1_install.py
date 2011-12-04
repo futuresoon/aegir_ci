@@ -70,8 +70,7 @@ def fab_install_dependencies(newpass):
 
 # Install OwnCloud
 
-def 
-pare_owncloud():
+def prepare_owncloud():
 	fabric.run("git clone git://gitorious.org/owncloud/owncloud.git", pty=True)
 	fabric.run("cp -r owncloud /var/www", pty=True)
 	fabric.run("chown -R www-data:www-data /var/www/owncloud", pty=True)
@@ -139,13 +138,15 @@ def run_platform_tests():
         print "===> Installing some common platforms"
         fab_install_platform('drupal6')
         fab_install_platform('drupal7')
-        fab_install_platform('openatrium')
+        fab_install_platform('civicrm4')
+        fab_install_platform('managingnews')
 
 def run_site_tests():
         print "===> Installing some sites"
         fab_install_site('drupal6', 'default')
         fab_install_site('drupal7', 'standard')
-        fab_install_site('openatrium', 'openatrium')
+        fab_install_site('civicrm4', 'standard')
+        fab_install_site('managingnews', 'default')
 
 def main():
         # Run some tests
