@@ -125,8 +125,8 @@ def fab_install_platform(platform_name):
 
 # Install a site
 def fab_install_site(platform_name, profile):
-        fabric.run("su - -s /bin/sh aegir -c '/var/aegir/drush/drush.php --uri=\'%s.mig5.net\' provision-save \'@%s.mig5.net\' --context_type=\'site\' --platform=\'@platform_%s\' --profile=\'%s\' --db_server=\'@server_localhost\''" % (platform_name, platform_name, platform_name, profile), pty=True)
-        fabric.run("su - -s /bin/sh aegir -c '/var/aegir/drush/drush.php @%s.mig5.net provision-install'" % platform_name, pty=True)
+        fabric.run("su - -s /bin/sh aegir -c '/var/aegir/drush/drush.php --uri=\'%s.%s\' provision-save \'@%s.%s\' --context_type=\'site\' --platform=\'@platform_%s\' --profile=\'%s\' --db_server=\'@server_localhost\''" % (platform_name, top_domain, platform_name, top_domain, platform_name, profile), pty=True)
+        fabric.run("su - -s /bin/sh aegir -c '/var/aegir/drush/drush.php @%s.%s provision-install'" % platform_name, top_domain, pty=True)
         fabric.run("su - -s /bin/sh aegir -c '/var/aegir/drush/drush.php @hostmaster hosting-task @platform_%s verify'" % platform_name, pty=True)
         fab_run_dispatch()
 
