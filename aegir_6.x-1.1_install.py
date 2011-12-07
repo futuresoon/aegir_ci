@@ -41,7 +41,6 @@ email = config.get('Aegir', 'email')
 #trusted_ip = config.get('Aegir', 'trusted_ip')
 # Where our build files are
 builds_repo = config.get('Aegir', 'builds_repo')
-top_domain = config.get('Aegir', 'top_domain')
 
 hostname = 'aegirjenkins-%d' % random.randrange(0, 10001, 2)
 
