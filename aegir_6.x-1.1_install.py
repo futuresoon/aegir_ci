@@ -144,7 +144,7 @@ def run_site_tests():
         print "===> Installing some sites"
         fab_install_site('drupal6', 'default')
         fab_install_site('drupal7', 'standard')
-        fab_install_site('kickstarterclone', 'kickstarterclone')
+        fab_install_site('kickstarterclone', 'kickstartercloneprofile')
 
 def main():
         # Run some tests
