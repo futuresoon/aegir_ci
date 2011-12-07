@@ -19,6 +19,8 @@ c) your rackspace API key which can be found at:
 https://manage.rackspacecloud.com/APIAccess.do
 click Show key to unhide the key
 
+The distro does a search for available distros at Rackspace. Check out the libcloud help if it's not working. http://libcloud.apache.org/getting-started.html
+
 It's at this point that you want to edit the aegir_6.x-1.1_install.py file and define what to build. In my example that I'm giving you, I'm fetching three Drush make stub or 'build' files from my github repo, named drupal6, drupal7 and openatrium .build respectively.
 
 The code that does this is the function fab_install_platform().
